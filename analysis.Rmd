@@ -35,6 +35,14 @@ in parliament), *gndr* (gender) and *agea* (age) into the model, we can control
 for their effects. 
 
 ## 3. Results
+Results in table 1 indicate that the chosen model as a whole does explain 
+satisfaction with democracy only to a certain extent (r^2 = 0.257). It has also
+to be stated that there is no significant influence of political TV consumption
+on the dependent variable, meaning that H1 cannot be confirmed. On the other hand,
+for H2 there is a significant result but not in favor of the hypothesis. 
+The satisfaction of respondents stating they are "not at all interested" is
+significantly lower than it is for very interested respondents. Both hypotheses 
+with that have to be rejected.
 ```{r echo=TRUE, warning=FALSE, results='asis'}
 library(stargazer)
 library(here)
@@ -52,6 +60,5 @@ stargazer(model_stfdem, style = "ajps",
 
 
 
-
-
 ## 4. Discussion
+What does the rejection of the hypotheses mean for the research question?
