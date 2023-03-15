@@ -1,6 +1,6 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output: html_document
 ---
 # Class Exercise 1
 
@@ -35,8 +35,9 @@ in parliament), *gndr* (gender) and *agea* (age) into the model, we can control
 for their effects. 
 
 ## 3. Results
-```{r, echo=TRUE}
+```{r echo=TRUE, warning=FALSE, results='asis'}
 library(stargazer)
+library(here)
 dat <- readRDS(here("data", "data_processed.rds")) #load data
 
 # modelling satisfaction with democracy
@@ -44,7 +45,9 @@ model_stfdem <- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(g
             + agea, dat)
 summary(model_stfdem)
 
-stargazer(model, style = "ajps", out = here("data", "table.html"))
+stargazer(model_stfdem, style = "ajps", 
+          type = "html", title = "Table 1. Modelling Satisfaction with Democracy",
+          out = here("data", "table.html"))
 ```
 
 
