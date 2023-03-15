@@ -26,7 +26,22 @@ democracy can be a result of a high political literacy, rather than individuals
 being not satisfied because they are not well informed about political affairs. 
 
 ## 2. Methods
+Multiple regression analysis will be used as the dependent variable *stfdem* 
+(satisfaction with democracy) is continuous. The variables of interest *tvpol*
+(amount of political TV consumption) and *polintr* (political interest) are 
+regarded as categorical data, thus for the analysis a reference category is built
+in order to assess effects. By integrating also the variables *trstprl* (trust
+in parliament), *gndr* (gender) and *agea* (age) into the model, we can control
+for their effects. 
 
 ## 3. Results
+```{r}
+library(stargazer)
+stargazer(load(here("data", "model.RData")), style = "ajps", out = here("data", "table.html"))
+```
+
+
+
+
 
 ## 4. Discussion
