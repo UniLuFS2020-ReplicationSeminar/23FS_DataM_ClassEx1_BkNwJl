@@ -12,4 +12,6 @@ model <- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(gndr)
 summary(model)
 
 # export model object
+
 save(model, file = here("data", "model.RData"))
+
