@@ -2,17 +2,31 @@
 title: "R Notebook"
 output: html_notebook
 ---
+# Class Exercise 1
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+## 1. Introduction
+Satisfaction of the public with democracy is crucial for the functioning of
+political ecosystems. We therefore investigate predictors for individuals'
+satisfaction in Switzerland by having a look at the political interest and
+media usage of the Swiss respondents from the European Social Survey. A 
+regression analysis will then be conducted to assess the influence of some 
+variables on satisfaction with democracy. Consequently, the research question
+addressed here is:
+- Does TV usage and political interest affect citizens' satisfaction with 
+democracy?
+With regards to the above question, following hypotheses have been elaborated 
+which later will be tested using empirical data. 
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+1. Increased consumption of political contents on TV results in a lower 
+satisfaction with democracy.
+2. Higher political interest results in a lower satisfaction with democracy.
 
-```{r}
-plot(cars)
-```
+The confirmation of these hypotheses would show that low satisfaction with 
+democracy can be a result of a high political literacy, rather than individuals
+being not satisfied because they are not well informed about political affairs. 
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+## 2. Methods
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+## 3. Results
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+## 4. Discussion
