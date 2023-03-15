@@ -35,9 +35,16 @@ in parliament), *gndr* (gender) and *agea* (age) into the model, we can control
 for their effects. 
 
 ## 3. Results
-```{r}
+```{r, echo=TRUE}
 library(stargazer)
-stargazer(load(here("data", "model.RData")), style = "ajps", out = here("data", "table.html"))
+dat <- readRDS(here("data", "data_processed.rds")) #load data
+
+# modelling satisfaction with democracy
+model_stfdem <- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(gndr) 
+            + agea, dat)
+summary(model_stfdem)
+
+stargazer(model, style = "ajps", out = here("data", "table.html"))
 ```
 
 
