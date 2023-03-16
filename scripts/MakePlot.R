@@ -8,21 +8,24 @@ dat <- readRDS(here("data", "data_processed.rds")) # reading preprocessed data
 
 #Plotting possible relation of satiscation and tv usage
 ggplot(dat) +
-  geom_jitter(mapping = aes(x = tvpol, y = stfdem), color = "steelblue", shape = 7) +
-  geom_smooth(mapping = aes(x = tvpol, y = stfdem), color = "red4", method = "lm") +
+  geom_jitter(mapping = aes(x = tvpol, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
+  geom_smooth(mapping = aes(x = tvpol, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  theme_grey() +
   labs(
     title = "Satisfaction with democracy and TV usage",
     x = "TV usage",
-    y = "Satisfaction")
-
+    y = "Satisfaction") 
+  
+save(ggplot, file = here("data", "ggplot1.RData"))
 
 #Plotting possible relation of satiscation and political interest
 ggplot(dat) +
-  geom_jitter(mapping = aes(x = polintr, y = stfdem), color = "steelblue", shape = 7) +
-  geom_smooth(mapping = aes(x = polintr, y = stfdem), color = "red4", method = "lm") +
+  geom_jitter(mapping = aes(x = polintr, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
+  geom_smooth(mapping = aes(x = polintr, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  theme_grey() +
   labs(
     title = "Satisfaction with democracy and TV usage",
     x = "Political interest",
     y = "Satisfaction")
   
-
+save(ggplot, file = here("data", "ggplot2.RData"))

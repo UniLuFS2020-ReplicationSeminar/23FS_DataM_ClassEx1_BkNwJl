@@ -3,6 +3,8 @@ title: "Data Mining in R FS23: Version Control"
 output: html_document
 ---
 ```{r eval=TRUE, echo=FALSE, include=FALSE}
+install.packages("stargazer")
+install.packages("here")
 library(stargazer)
 library(here)
 ```
@@ -66,6 +68,7 @@ stargazer(model_stfdem, style = "ajps",
           type = "html", title = "Table 1. Modelling Satisfaction with Democracy",
           out = here("data", "table.html"))
 ```
+
 
 
 
