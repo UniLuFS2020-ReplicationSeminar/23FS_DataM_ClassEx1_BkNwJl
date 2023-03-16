@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Data Mining in R FS23: Version Control"
 output: html_document
 ---
 ```{r eval=TRUE, echo=FALSE, include=FALSE}
@@ -17,8 +17,12 @@ media usage of the Swiss respondents from the European Social Survey. A
 regression analysis will then be conducted to assess the influence of some 
 variables on satisfaction with democracy. Consequently, the research question
 addressed here is:
+
+
 - Does TV usage and political interest affect citizens' satisfaction with 
 democracy?
+
+
 With regards to the above question, following hypotheses have been elaborated 
 which later will be tested using empirical data. 
 
@@ -66,4 +70,5 @@ stargazer(model_stfdem, style = "ajps",
 
 
 ## 4. Discussion
-What does the rejection of the hypotheses mean for the research question?
+What does the rejection of the hypotheses now mean for the research question? 
+
