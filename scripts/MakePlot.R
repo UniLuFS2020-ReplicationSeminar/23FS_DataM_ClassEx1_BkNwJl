@@ -16,7 +16,9 @@ ggplot1 <- ggplot(dat) +
     x = "TV usage",
     y = "Satisfaction") 
   
-save(ggplot, file = here("data", "ggplot1.RData"))
+save(ggplot, file = here("data", "ggplot1.RData")) #saving in R format
+save(ggplot, file = here("images", "ggplot1.png")) #saving as image
+
 
 #Plotting possible relation of satiscation and political interest
 ggplot2 <- ggplot(dat) +
@@ -28,4 +30,8 @@ ggplot2 <- ggplot(dat) +
     x = "Political interest",
     y = "Satisfaction")
   
-save(ggplot, file = here("data", "ggplot2.RData"))
+save(ggplot, file = here("data", "ggplot2.RData")) #saving in R format
+save(ggplot, file = here("images", "ggplot2.png")) #saving as image
+
+
+
