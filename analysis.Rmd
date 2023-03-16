@@ -55,8 +55,9 @@ dat <- readRDS(here("data", "data_processed.rds")) #load data
 # modelling satisfaction with democracy
 model_stfdem <- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(gndr) 
             + agea, dat)
-summary(model_stfdem)
+#summary(model_stfdem)
 
+# show results in table
 stargazer(model_stfdem, style = "ajps", 
           type = "html", title = "Table 1. Modelling Satisfaction with Democracy",
           out = here("data", "table.html"))
