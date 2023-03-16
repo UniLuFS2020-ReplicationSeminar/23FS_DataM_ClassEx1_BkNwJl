@@ -69,7 +69,6 @@ stargazer(model_stfdem, style = "ajps",
           out = here("data", "table.html"))
 ```
 
-
 ## 4. Discussion
 What does the rejection of the hypotheses now mean for the research question? 
 The regression analysis implies that there is an influence of the political
