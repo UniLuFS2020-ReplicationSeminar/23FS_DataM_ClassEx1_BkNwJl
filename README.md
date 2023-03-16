@@ -14,8 +14,16 @@ We used data from Switzerland from the [ESS round 8](https://europeansocialsurve
 
 ## Scripts 💻
 You'll find our scripts in the folder «scripts».
+"ImportPreprocess.R" contains code regarding the prepartion of the raw data.
+"RegressionModel.R" contains code for the regression model.
+"MakePlot.R" contains code for the creation of two scatter plots.
 
 ## Figures 🚀
-You'll find our plotted figures in the folder «images».
+You'll find our plotted figures in the folder «images». 
+"Image1.png" shows the relationship between "Satisfaction with Democracy" and "TV Usage".
+"Image2.png" shows the relationship between "Satisfaction with Democracy" and "Political Interest".
 
+## R Markdown
+The R Markdown is saved as "analysis.Rmd".
+You'll also find it as HTML file under "analysis.html"
 

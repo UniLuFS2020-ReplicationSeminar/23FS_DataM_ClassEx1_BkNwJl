@@ -52,16 +52,16 @@ to be stated that there is no significant influence of political TV consumption
 on the dependent variable, meaning that H1 cannot be confirmed. On the other hand,
 for H2 there is a significant result but not in favor of the hypothesis. 
 The satisfaction of respondents stating they are "not at all interested" is
-significantly lower than it is for very interested respondents. Both hypotheses 
-with that have to be rejected.
+significantly lower than it is for very interested respondents. Both hypotheses have to be therefore rejected.
+Results can also be viewed in image 1 and image 2, which show the scatter plots of the dependent and each of the independent variables.
 ```{r echo=FALSE, warning=FALSE, results='asis'}
-
+## Table 1
 dat <- readRDS(here("data", "data_processed.rds")) #load data
 
 # modelling satisfaction with democracy
 model_stfdem <- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(gndr) 
             + agea, dat)
-#summary(model_stfdem)
+# summary(model_stfdem)
 
 # show results in table
 stargazer(model_stfdem, style = "ajps", 
@@ -76,25 +76,43 @@ library(ggplot2)
 
 dat <- readRDS(here("data", "data_processed.rds")) # reading preprocessed data
 
-#Image 1 - Plotting possible relation of satisfaction and TV usage
+# Image 1 - Plotting possible relation of satisfaction and TV usage
 ggplot1 <- ggplot(dat) +
-  geom_jitter(mapping = aes(x = tvpol, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
-  geom_smooth(mapping = aes(x = tvpol, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  geom_jitter(mapping = aes(x = tvpol, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2, alpha = 0.7) +
+  geom_smooth(mapping = aes(x = tvpol, y = stfdem), color = "red4", linetype = 1, linewidth = 1, method = "lm", se = FALSE) +
   theme_grey() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 17, face = "bold"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  ) +
   labs(
     title = "Satisfaction with democracy and TV usage",
     x = "TV usage",
-    y = "Satisfaction")
+    y = "Satisfaction") 
+ggplot1  
 
 # Image 2 - Plotting possible relation of satisfaction and political interest
 ggplot2 <- ggplot(dat) +
-  geom_jitter(mapping = aes(x = polintr, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
-  geom_smooth(mapping = aes(x = polintr, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  geom_jitter(mapping = aes(x = polintr, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2, alpha = 0.7) +
+  geom_smooth(mapping = aes(x = polintr, y = stfdem), color = "red4", linetype = 1, linewidth = 1, method = "lm", se = FALSE) +
   theme_grey() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 17, face = "bold"),
+    axis.title.x = element_text(size = 14, face = "bold"),
+    axis.title.y = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12),
+    panel.grid.minor = element_blank()
+  ) +
   labs(
-    title = "Satisfaction with democracy and TV usage",
-    x = "Political interest",
+    title = "Satisfaction with Democracy and Political Interest",
+    x = "Political Interest",
     y = "Satisfaction")
+ggplot2
 ```
 
 ## 4. Discussion
