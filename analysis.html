@@ -392,19 +392,15 @@ effects.</p>
 </div>
 <div id="results" class="section level2">
 <h2>3. Results</h2>
-<pre class="r"><code>library(stargazer)</code></pre>
-<pre><code>## 
-## Please cite as:</code></pre>
-<pre><code>##  Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.</code></pre>
-<pre><code>##  R package version 5.2.3. https://CRAN.R-project.org/package=stargazer</code></pre>
-<pre class="r"><code>library(here)</code></pre>
-<pre><code>## here() starts at /Users/julienlattmann/Desktop/Uni/UNILU/FS23/Data Mining/23FS_DataM_ClassEx1_BkNwJl</code></pre>
-<pre class="r"><code>dat &lt;- readRDS(here(&quot;data&quot;, &quot;data_processed.rds&quot;)) #load data
-
-# modelling satisfaction with democracy
-model_stfdem &lt;- lm(stfdem ~ factor(tvpol) + factor(polintr) + trstprl + factor(gndr) 
-            + agea, dat)
-summary(model_stfdem)</code></pre>
+<p>Results in table 1 indicate that the chosen model as a whole does
+explain satisfaction with democracy only to a certain extent (r^2 =
+0.257). It has also to be stated that there is no significant influence
+of political TV consumption on the dependent variable, meaning that H1
+cannot be confirmed. On the other hand, for H2 there is a significant
+result but not in favor of the hypothesis. The satisfaction of
+respondents stating they are “not at all interested” is significantly
+lower than it is for very interested respondents. Both hypotheses with
+that have to be rejected.</p>
 <p>Call: lm(formula = stfdem ~ factor(tvpol) + factor(polintr) + trstprl
 + factor(gndr) + agea, data = dat)</p>
 <p>Residuals: Min 1Q Median 3Q Max -7.3746 -0.8423 0.1798 1.0865
@@ -429,9 +425,6 @@ agea -0.0008589 0.0014513 -0.592 0.5541<br />
 <p>Residual standard error: 1.627 on 1313 degrees of freedom Multiple
 R-squared: 0.2569, Adjusted R-squared: 0.2495 F-statistic: 34.91 on 13
 and 1313 DF, p-value: &lt; 2.2e-16</p>
-<pre class="r"><code>stargazer(model_stfdem, style = &quot;ajps&quot;, 
-          type = &quot;html&quot;, title = &quot;Table 1. Modelling Satisfaction with Democracy&quot;,
-          out = here(&quot;data&quot;, &quot;table.html&quot;))</code></pre>
 <table style="text-align:center">
 <caption>
 <strong>Table 1. Modelling Satisfaction with Democracy</strong>
@@ -715,6 +708,8 @@ F Statistic
 </div>
 <div id="discussion" class="section level2">
 <h2>4. Discussion</h2>
+<p>What does the rejection of the hypotheses mean for the research
+question?</p>
 </div>
 </div>
 

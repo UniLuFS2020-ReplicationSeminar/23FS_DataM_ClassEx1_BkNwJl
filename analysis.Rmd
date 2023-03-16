@@ -2,6 +2,11 @@
 title: "R Notebook"
 output: html_document
 ---
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(stargazer)
+library(here)
+```
+
 # Class Exercise 1
 
 ## 1. Introduction
@@ -43,9 +48,8 @@ for H2 there is a significant result but not in favor of the hypothesis.
 The satisfaction of respondents stating they are "not at all interested" is
 significantly lower than it is for very interested respondents. Both hypotheses 
 with that have to be rejected.
-```{r echo=TRUE, warning=FALSE, results='asis'}
-library(stargazer)
-library(here)
+```{r echo=FALSE, warning=FALSE, results='asis'}
+
 dat <- readRDS(here("data", "data_processed.rds")) #load data
 
 # modelling satisfaction with democracy
