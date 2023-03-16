@@ -10,7 +10,7 @@ democracy?»**
 * Nicolas
 
 ## Data 🗃
-We used data from Switzerland from the [ESS round 8](europeansocialsurvey.org). Let us know, if you want the raw data.  
+We used data from Switzerland from the [ESS round 8](https://europeansocialsurvey.org). Let us know, if you want the raw data.  
 
 ## Scripts 💻
 You'll find our scripts in the folder «scripts».
