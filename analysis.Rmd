@@ -68,6 +68,34 @@ stargazer(model_stfdem, style = "ajps",
           type = "html", title = "Table 1. Modelling Satisfaction with Democracy",
           out = here("data", "table.html"))
 ```
+```{r}
+##Images
+
+library(here)
+library(ggplot2)
+
+dat <- readRDS(here("data", "data_processed.rds")) # reading preprocessed data
+
+#Image 1 - Plotting possible relation of satisfaction and TV usage
+ggplot1 <- ggplot(dat) +
+  geom_jitter(mapping = aes(x = tvpol, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
+  geom_smooth(mapping = aes(x = tvpol, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  theme_grey() +
+  labs(
+    title = "Satisfaction with democracy and TV usage",
+    x = "TV usage",
+    y = "Satisfaction")
+
+# Image 2 - Plotting possible relation of satisfaction and political interest
+ggplot2 <- ggplot(dat) +
+  geom_jitter(mapping = aes(x = polintr, y = stfdem), color = "steelblue", fill = NA, shape = 4, size = 1.2) +
+  geom_smooth(mapping = aes(x = polintr, y = stfdem), color = "red4", linetype = 1, linewidth = 0.5, method = "lm") +
+  theme_grey() +
+  labs(
+    title = "Satisfaction with democracy and TV usage",
+    x = "Political interest",
+    y = "Satisfaction")
+```
 
 ## 4. Discussion
 What does the rejection of the hypotheses now mean for the research question? 
