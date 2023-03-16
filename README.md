@@ -16,7 +16,6 @@ We used data from Switzerland from the [ESS round 8](europeansocialsurvey.org). 
 You'll find our scripts in the folder «scripts».
 
 ## Figures 🚀
-
 You'll find our plotted figures in the folder «images».
 
 
